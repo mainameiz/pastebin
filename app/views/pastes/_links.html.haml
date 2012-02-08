@@ -1,0 +1,14 @@
+- if user_signed_in?
+  = link_to "Sign Out", destroy_user_session_path, method: "delete", class: "right"
+- else
+  = link_to "Sign Up", new_user_registration_path, class: "right"
+  = link_to "Sign In", new_user_session_path, class: "right"
+
+- if user_signed_in? and not params[:mine]
+  = link_to "My pastes", pastes_path, class: "right"
+
+- if [ "show", "edit", "index" ].include? action_name
+  = link_to "New paste", new_paste_path, class: "right"
+
+-# if [ "show", "new", "create" ].include? action_name or ( action_name == "index" and params[:mine] )
+  = link_to "All pastes", pastes_path, class: "right"

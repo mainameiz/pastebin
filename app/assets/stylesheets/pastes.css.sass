@@ -1,0 +1,122 @@
+@import "notifications"
+
+$paste-title-bg: #3333FF
+$paste-code-bg: #009933
+$bg: #009933
+
+body
+  font-family: Halvetica,Arial,Sans-Serif
+  background-color: $bg
+  color: white
+
+#container
+  width: 80%
+  min-width: 800px
+  margin-left: auto
+  margin-right: auto
+
+#paste-list, #paste-show
+  color: black
+  padding-bottom: 20px
+  .paste
+    //margin-top: 5px
+    border-radius: 5px
+    .title
+      padding: 5px
+    .code
+      font-size: 12px
+      font-family: 'Bitstream Vera Sans Mono','Courier New',monospace
+      margin-top: 5px
+      border-radius: 8px
+      box-shadow: black 0px 0px 8px
+      padding: 10px
+      background-color: white
+
+#language
+  margin-bottom: 5px
+
+
+#paste_code, #paste_title, #paste-new
+  margin-top: 12px
+
+a, label, .alert-message, .error-explanation
+  font-weight: bold
+  font-size: 18px
+  line-height: 18px
+  text-shadow: black 0px 0px 4px
+  color: white
+
+.error-explanation
+  //position: relative
+  //display: inline-block
+  float: left
+  font-size: 12px
+  background-color: darken(red, 10%)
+  border-radius: 5px
+  padding: 0px 4px
+  margin-left: 5px
+  line-height: 18px
+
+select
+  font-size: 12px
+  margin-left: 5px
+  line-height: 18px
+
+label
+  float: left
+  //margin-top: 2px
+  //display: inline-block
+
+.alert-message
+  box-shadow: black 0px 0px 4px
+  font-size: 14px
+
+#logo
+  display: block
+  font-size: 42px
+  padding: 20px
+
+a
+  padding: 5px
+
+a:hover
+  text-decoration: none
+
+a.title
+  font-size: 20px
+
+input[type="text"], input[type="password"], input[type="email"], textarea
+  border: 0px
+  border-radius: 3px
+  box-shadow: black 0px 0px 5px
+  padding: 5px
+  font: 14px 'Bitstream Vera Sans Mono','Courier New',monospace
+  width: 100%
+
+#paste_title
+  margin-bottom: 10px
+
+.right
+  margin-top: 20px
+  float: right
+
+.control
+  margin-top: 0px
+
+.format
+  font-size: 14px
+  margin-right: auto
+  margin-left: auto
+
+input.embed
+  display: inline-block
+  width: auto
+  padding: 1px
+  font-size: 12px
+
+input.hidden
+  display: none
+
+pre
+  margin: 0px
+  padding: 0px

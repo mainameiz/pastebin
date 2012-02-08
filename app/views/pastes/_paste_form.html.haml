@@ -1,0 +1,14 @@
+= form_for @paste, :builder => PasteFormBuilder do |f|
+  #title
+    = f.label :title
+    -#= @paste.errors_for :title
+    = f.text_field :title
+  #language
+    = f.label :language
+    = f.select :language, options_for_select(Pygments.lexers.collect{ |l| [l[0], l[1][:aliases][0]] }.sort, selected: @paste.language )
+    -#= @paste.errors_for :language
+  #code
+    = f.label :code
+    -#= @paste.errors_for :code
+  = f.text_area :code
+  = f.submit

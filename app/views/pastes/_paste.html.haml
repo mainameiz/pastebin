@@ -1,0 +1,12 @@
+.paste
+  .title
+    - if can? :destroy, paste
+      = link_to "Destroy", paste_path(paste), method: "delete", confirm: "Are you sure?", class: "right control"
+    - if can? :update, paste
+      = link_to "Edit", edit_paste_path(paste), class: "right control"
+    = link_to paste.title.blank? ? "Untitled" : paste.title, paste_path(paste), class: "title"
+    = link_to "raw", paste_path(paste, :txt), class: "format"
+    = link_to "embed", paste_path(paste, :js), class: "format embed"
+    %input{ type: "text", value: "<script type=\"text/javascript\" src=\"#{paste_url(paste, :js)}\"></script>", class: "hidden embed" }
+  .code><
+    !~ Pygments.highlight(paste.code, lexer: paste.language )

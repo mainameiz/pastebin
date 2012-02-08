@@ -1,0 +1,22 @@
+!!! 5
+%html
+  %head
+    %title Pastes
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    #container
+      = render "pastes/links"
+      = link_to "Yet Another Paste Tool", pastes_path, id: "logo"
+      - if notice
+        .alert-message.success
+          %a.close{ :href => "#" } ×
+          %p
+            = notice
+      - if alert
+        .alert-message.error
+          %a.close{ :href => "#" } ×
+          %p
+            = alert
+      = yield

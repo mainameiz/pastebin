@@ -1,0 +1,5 @@
+- if can? :destroy, paste
+  = link_to "Destroy", paste_path(paste), method: "delete", confirm: "Are you sure?", class: "right control"
+
+- if can? :update, paste
+  = link_to "Edit", edit_paste_path(paste), class: "right control"
