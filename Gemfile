@@ -18,6 +18,8 @@ gem 'therubyracer', '~> 0.9.9'
 gem 'rails-i18n', '~> 0.3.0'
 gem 'simplecov'#, '~> '
 #gem 'launchy'
+#gem 'surb', :git => 'git://github.com/mainameiz/surb.git'
+gem 'surb', :path => '../gems/surb'
 
 # Gems used only for assets and not required
 # in production environments by default.
