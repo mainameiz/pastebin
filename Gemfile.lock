@@ -1,11 +1,3 @@
-PATH
-  remote: ../gems/surb
-  specs:
-    surb (0.0.1)
-      haml (~> 3.1.4)
-      hpricot (~> 0.8.6)
-      ruby_parser (~> 2.3.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -96,7 +88,6 @@ GEM
     haml (3.1.4)
     highline (1.6.11)
     hike (1.2.1)
-    hpricot (0.8.6)
     i18n (0.6.0)
     jquery-rails (1.0.19)
       railties (~> 3.0)
@@ -175,8 +166,6 @@ GEM
       railties (>= 3.0)
       rspec (~> 2.8.0)
     ruby-prof (0.10.8)
-    ruby_parser (2.3.1)
-      sexp_processor (~> 3.0)
     rubypython (0.5.1)
       blankslate (>= 2.1.2.3)
       ffi (~> 1.0.7)
@@ -192,7 +181,6 @@ GEM
       ffi (~> 1.0.9)
       multi_json (~> 1.0.4)
       rubyzip
-    sexp_processor (3.0.10)
     simplecov (0.5.4)
       multi_json (~> 1.0.3)
       simplecov-html (~> 0.5.3)
@@ -228,33 +216,32 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bson_ext (~> 1.5)
-  cancan (~> 1.6.7)
-  capistrano (~> 2.9.0)
+  bson_ext
+  cancan
+  capistrano
   capybara
-  devise (~> 1.5.3)
-  devise-i18n (= 0.1.1)
+  devise
+  devise-i18n
   factory_girl_rails
   guard
   guard-livereload
   guard-rspec
   guard-spork
-  haml (~> 3.1.4)
+  haml
   jquery-rails
   libnotify
-  mongoid (~> 2.4)
-  pygments.rb (= 0.1.3)
+  mongoid
+  pygments.rb
   rails (~> 3.1.3)
-  rails-i18n (~> 0.3.0)
+  rails-i18n
   rb-inotify
   rspec-rails
   ruby-prof
-  rubypython (= 0.5.1)
+  rubypython
   sass-rails (~> 3.1.5)
   simplecov
   spork
-  surb!
-  therubyracer (~> 0.9.9)
+  therubyracer
   turn (= 0.8.2)
   uglifier (>= 1.0.3)
-  unicorn (~> 4.1.1)
+  unicorn
