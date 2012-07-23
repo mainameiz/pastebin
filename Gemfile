@@ -50,6 +50,7 @@ group :test do
 end
 
 group :development do
+  gem 'ruby-prof'
 end
 
 # To use ActiveModel has_secure_password

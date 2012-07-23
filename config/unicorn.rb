@@ -32,14 +32,14 @@ end
 # stderr_path "#{shared_path}/log/unicorn.stderr.log"
 # stdout_path "#{shared_path}/log/unicorn.stdout.log"
 
-p =  "/tmp/unicorn.#{app_name}.#{env}.pid"
-pid p
+pid "/tmp/unicorn.#{app_name}.#{env}.pid"
 
 before_fork do |server, worker|
-  old_pid = p + ".oldbin"
+ old_pid = "#{server.config[:pid]}.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
-      Process.kill("QUIT", File.read(old_pid).to_i)
+      sig = (worker.nr + 1) >= server.worker_processes ? :QUIT : :TTOU
+      Process.kill(sig, File.read(old_pid).to_i)
     rescue Errno::ENOENT, Errno::ESRCH
       # someone else did our job for us
     end

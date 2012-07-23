@@ -16,5 +16,5 @@
 
 /coverage
 /vendor/bundle
-.rspec
 .livereload
+/surb
